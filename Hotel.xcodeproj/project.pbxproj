@@ -733,6 +733,7 @@
 				DEVELOPMENT_TEAM = WJQJLPE4SP;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Hotel/Prefix/Header.h";
 				INFOPLIST_FILE = Hotel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -752,6 +753,7 @@
 				DEVELOPMENT_TEAM = WJQJLPE4SP;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Hotel/Prefix/Header.h";
 				INFOPLIST_FILE = Hotel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

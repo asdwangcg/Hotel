@@ -48,7 +48,8 @@
 #define CellInit(class, idfStr) class *cell = nil;static NSString *idf = idfStr;if (cell == nil) {cell = [[class alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:idf];}else {while ([cell.contentView.subviews lastObject] != nil) {[(UIView *)[cell.contentView.subviews lastObject] removeFromSuperview];}}
 #define LogData NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];NSLog(@"%@", str);
 #define JsonData         NSMutableDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-
+#define colorHex(color) [UIColor colorWithRed:((float)((color & 0xFF0000) >> 16)) / 255.0 green:((float)((color & 0xFF00) >> 8)) / 255.0 blue:((float)(color & 0xFF)) / 255.0 alpha:1.0f]
+#define imageOrigin(image) [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

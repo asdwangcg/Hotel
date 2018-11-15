@@ -11,4 +11,11 @@
 
 #import "BasePrefixHeader.pch"
 #import "UIViewController+Base.h"
+#import <AFNetworking.h>
+#import <IQKeyboardManager.h>
+#import <UIImageView+WebCache.h>
+#import <UIButton+WebCache.h>
+#import <ConnectModel.h>
+#import <Masonry.h>
+#import <WebKit/WebKit.h>
 #endif /* Header_h */

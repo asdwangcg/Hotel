@@ -10,5 +10,8 @@
 
 @interface UIViewController (Base)
 - (void)config;
+- (float)StatusbarHeight;
+- (float)NavigationStatusbarHeight;
+- (float)TabbarHeight;
 @end
 

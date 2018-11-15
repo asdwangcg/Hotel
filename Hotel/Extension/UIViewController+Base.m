@@ -12,4 +12,15 @@
 - (void)config {
     [self.view setBackgroundColor:[UIColor whiteColor]];
 }
+-(float)StatusbarHeight{
+    return [[UIApplication sharedApplication] statusBarFrame].size.height;
+}
+
+-(float)NavigationStatusbarHeight{
+    return self.navigationController.navigationBar.frame.size.height + [[UIApplication sharedApplication] statusBarFrame].size.height;
+}
+
+-(float)TabbarHeight{
+    return self.tabBarController.tabBar.bounds.size.height;
+}
 @end

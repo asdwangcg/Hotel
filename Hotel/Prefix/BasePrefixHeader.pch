@@ -9,6 +9,46 @@
 #ifndef BasePrefixHeader_pch
 #define BasePrefixHeader_pch
 
+#define WeakSelf __weak typeof(self) weakSelf = self;
+
+#define TintColor [UIColor colorWithRed:252 / 255.0 green:215 / 255.0 blue:51 / 255.0 alpha:1]
+#define BackgroundColor [UIColor colorWithRed:241 / 255.0 green:241 / 255.0 blue:241 / 255.0 alpha:1]
+#define SepColor [UIColor colorWithRed:197 / 255.0 green:197 / 255.0 blue:197 / 255.0 alpha:1]
+#define CellFont [UIFont systemFontOfSize:12 * 1.000]
+#define BoldCellFont [UIFont boldSystemFontOfSize:12 * 1.000]
+#define Font [UIFont systemFontOfSize:12 * 1.000]
+#define BoldFont [UIFont boldSystemFontOfSize:12 * 1.000]
+#define ViewCount self.view.frame.size.width / 375
+#define CellCount self.frame.size.width / 375
+#define User_Name [[NSUserDefaults standardUserDefaults] objectForKey:@"User_Name"]
+#define User_Code [[NSUserDefaults standardUserDefaults] objectForKey:@"User_Code"]
+#define User_NickName [[NSUserDefaults standardUserDefaults] objectForKey:@"User_NickName"]
+#define User_CurrentYear [[NSUserDefaults standardUserDefaults] objectForKey:@"CurrentYear"]
+#define User_CurrentMonth [[NSUserDefaults standardUserDefaults] objectForKey:@"CurrentMonth"]
+#define User_InCount [[NSUserDefaults standardUserDefaults] objectForKey:@"inCount"]
+#define User_InNum [[NSUserDefaults standardUserDefaults] objectForKey:@"inNum"]
+#define User_OutCount [[NSUserDefaults standardUserDefaults] objectForKey:@"outCount"]
+#define User_OutNum [[NSUserDefaults standardUserDefaults] objectForKey:@"outNum"]
+#define User_Sound [[NSUserDefaults standardUserDefaults] objectForKey:@"Sound"]
+#define User_Cloud [[NSUserDefaults standardUserDefaults] objectForKey:@"Cloud"]
+#define User_Push [[NSUserDefaults standardUserDefaults] objectForKey:@"Push"]
+#define User_Noti [[NSUserDefaults standardUserDefaults] objectForKey:@"Noti"]
+#define User_Show [[NSUserDefaults standardUserDefaults] objectForKey:@"Show"]
+
+
+#define StaNormal UIControlStateNormal
+#define TextLeft NSTextAlignmentLeft
+#define TextRight NSTextAlignmentRight
+#define TextCenter NSTextAlignmentCenter
+#define CustomBtn [UIButton buttonWithType:UIButtonTypeCustom]
+#define tpi UIControlEventTouchUpInside
+#define Xheight [[NSUserDefaults standardUserDefaults] floatForKey:@"X Height"]
+#define Xheader [[NSUserDefaults standardUserDefaults] floatForKey:@"X Header"]
+#define BarHeight [[NSUserDefaults standardUserDefaults] floatForKey:@"BarHeight"]
+#define CellInit(class, idfStr) class *cell = nil;static NSString *idf = idfStr;if (cell == nil) {cell = [[class alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:idf];}else {while ([cell.contentView.subviews lastObject] != nil) {[(UIView *)[cell.contentView.subviews lastObject] removeFromSuperview];}}
+#define LogData NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];NSLog(@"%@", str);
+#define JsonData         NSMutableDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

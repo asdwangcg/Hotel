@@ -40,7 +40,7 @@
     home.tabBarItem.image = imageOrigin(@"home");
     home.tabBarItem.selectedImage = imageOrigin(@"home1");
     UINavigationController *homeNav = [[UINavigationController alloc] initWithRootViewController:home];
-    [homeNav.navigationBar setTranslucent:YES];
+    [homeNav.navigationBar setTranslucent:NO];
     [homeNav.navigationBar setHidden:YES];
     
     AssistantViewController *assistant = [[AssistantViewController alloc] init];
@@ -82,6 +82,9 @@
     tab.tabBar.barTintColor = UIColor.whiteColor;
     tab.selectedIndex = 0;
     [tab setViewControllers:@[homeNav, assistantNav, centerNav, walletNav, mineNav]];
+    
+    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     
     [self.window setRootViewController:tab];
     [self.window makeKeyAndVisible];

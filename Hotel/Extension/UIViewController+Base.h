@@ -13,5 +13,6 @@
 - (float)StatusbarHeight;
 - (float)NavigationStatusbarHeight;
 - (float)TabbarHeight;
+- (void)Back;
 @end
 

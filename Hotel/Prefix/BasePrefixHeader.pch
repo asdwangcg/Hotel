@@ -50,6 +50,8 @@
 #define JsonData         NSMutableDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
 #define colorHex(color) [UIColor colorWithRed:((float)((color & 0xFF0000) >> 16)) / 255.0 green:((float)((color & 0xFF00) >> 8)) / 255.0 blue:((float)(color & 0xFF)) / 255.0 alpha:1.0f]
 #define imageOrigin(image) [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+
+#define push(viewController)    viewController *vc = [[viewController alloc] init];[self.navigationController pushViewController:vc animated:YES];[self.tabBarController setHidesBottomBarWhenPushed:YES];
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

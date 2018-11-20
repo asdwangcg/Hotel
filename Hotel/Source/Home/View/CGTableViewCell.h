@@ -11,11 +11,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CGTableViewCell : UITableViewCell
-
+@property (nonatomic, strong)NSDictionary *dic;
 @end
 
 @interface CGHugeTableViewCell : UITableViewCell
 @property (nonatomic, strong)NSDictionary *dic;
 @end
 
+@interface CGRoomListTableViewCell : UITableViewCell
+@property (nonatomic, strong)UIImageView *img;
+@end
 NS_ASSUME_NONNULL_END

@@ -10,6 +10,76 @@
 
 @implementation CGTableViewCell
 
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        
+    }
+    return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.height, self.frame.size.height)];
+    [img setImage:_dic[@"image"]];
+    [self addSubview:img];
+    
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(img.frame.size.width + img.frame.origin.x + 10, 10, self.frame.size.width - 20 - img.frame.size.width - img.frame.origin.x, [UIFont systemFontOfSize:15].pointSize)];
+    [title setTextColor:[UIColor colorWithRed:100 / 255.0 green:100 / 255.0 blue:100 / 255.0 alpha:1]];
+    [title setFont:[UIFont systemFontOfSize:15]];
+    [title setTextAlignment:TextLeft];
+    [title setText:_dic[@"title"]];
+    [self addSubview:title];
+    
+    UILabel *point = [[UILabel alloc] initWithFrame:CGRectMake(title.frame.origin.x, title.frame.size.height + title.frame.origin.y + 10, title.frame.size.width, title.frame.size.height * 3)];
+    [point setNumberOfLines:2];
+    NSString *pointS = _dic[@"point"];
+    NSMutableAttributedString *pointAttS = [[NSMutableAttributedString alloc]initWithString:pointS];
+    [pointAttS addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15] range:NSMakeRange(0, 3)];
+    [pointAttS addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:NSMakeRange(3, pointS.length - 3)];
+    [pointAttS addAttribute:NSForegroundColorAttributeName value:[UIColor orangeColor] range:NSMakeRange(0, 4)];
+    [pointAttS addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:193 / 255.0 green:193 / 255.0 blue:193 / 255.0 alpha:1] range:NSMakeRange(4, pointS.length - 4)];
+    [point setAttributedText:pointAttS];
+    [self addSubview:point];
+    
+    CGFloat ori_x = title.frame.origin.x;
+    CGFloat ori_y = point.frame.size.height + point.frame.origin.y;
+    for (int i = 0; i < [_dic[@"discout"] count]; i ++) {
+        NSString *discout = _dic[@"discout"][i];
+        UIFont *font = [UIFont systemFontOfSize:12];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(ori_x, ori_y, (discout.length + 2) * 10, font.pointSize + 4)];
+        [label setText:discout];
+        [label setTextAlignment:TextCenter];
+        [label setTextColor:[UIColor colorWithRed:230 / 255.0 green:119 / 255.0 blue:102 / 255.0 alpha:1]];
+        [label.layer setBorderColor:[UIColor colorWithRed:235 / 255.0 green:231 / 255.0 blue:229 / 255.0 alpha:1].CGColor];
+        [label setFont:[UIFont systemFontOfSize:10]];
+        [label.layer setBorderWidth:1];
+        [label.layer setCornerRadius:1];
+        [label.layer setMasksToBounds:YES];
+        [self addSubview:label];
+        ori_x += label.frame.size.width + 2;
+        if (i != [_dic[@"discout"] count] - 1) {
+            if ((ori_x + ([_dic[@"discout"][i + 1] length] + 2) * 10) > self.frame.size.width - 10) {
+                ori_x = title.frame.origin.x;
+                ori_y += label.frame.size.height + 2;
+            }
+        }
+    }
+    
+    NSString *priceS = [NSString stringWithFormat:@"￥%@ 起", _dic[@"price"]];
+    UILabel *price = [[UILabel alloc] initWithFrame:CGRectMake(point.frame.origin.x, self.frame.size.height - title.frame.size.height - 10, title.frame.size.width, title.frame.size.height)];
+    NSMutableAttributedString *priceAttS = [[NSMutableAttributedString alloc]initWithString:priceS];
+    [priceAttS addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:13] range:NSMakeRange(0, 1)];
+    [priceAttS addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:20] range:NSMakeRange(1, priceS.length - 1)];
+    [priceAttS addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15] range:NSMakeRange(priceS.length - 1, 1)];
+    [priceAttS addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:244 /255.0 green:53 / 255.0 blue:0 alpha:1] range:NSMakeRange(0, priceS.length - 1)];
+    [priceAttS addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:193 / 255.0 green:193 / 255.0 blue:193 / 255.0 alpha:1] range:NSMakeRange(priceS.length - 1, 1)];
+    [price setAttributedText:priceAttS];
+    [price setTextAlignment:TextRight];
+    [self addSubview:price];
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
@@ -29,6 +99,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        
     }
     return self;
 }
@@ -45,7 +116,7 @@
     [title setFont:[UIFont systemFontOfSize:15]];
     [title setText:_dic[@"title"]];
     
-    UILabel *point = [[UILabel alloc] initWithFrame:CGRectMake(title.frame.origin.x, title.frame.size.height + title.frame.origin.y, title.frame.size.width / 2, title.frame.size.height * 3)];
+    UILabel *point = [[UILabel alloc] initWithFrame:CGRectMake(title.frame.origin.x, title.frame.size.height + title.frame.origin.y, title.frame.size.width / 3 * 2, title.frame.size.height * 3)];
     [point setNumberOfLines:2];
     NSString *pointS = _dic[@"point"];
     NSMutableAttributedString *pointAttS = [[NSMutableAttributedString alloc]initWithString:pointS];
@@ -59,7 +130,7 @@
     for (int i = 0; i < [_dic[@"discout"] count]; i ++) {
         NSString *discout = _dic[@"discout"][i];
         UIFont *font = [UIFont systemFontOfSize:12];
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(ori_x, point.frame.size.height + point.frame.origin.y, [self textLength:discout] * font.pointSize, font.pointSize + 4)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(ori_x, point.frame.size.height + point.frame.origin.y, (discout.length + 2) * 10, font.pointSize + 4)];
         [label setText:discout];
         [label setTextAlignment:TextCenter];
         [label setTextColor:[UIColor colorWithRed:230 / 255.0 green:119 / 255.0 blue:102 / 255.0 alpha:1]];
@@ -71,6 +142,18 @@
         [self addSubview:label];
         ori_x += label.frame.size.width + 2;
     }
+    
+    NSString *priceS = [NSString stringWithFormat:@"￥%@ 起", _dic[@"price"]];
+    UILabel *price = [[UILabel alloc] initWithFrame:CGRectMake(point.frame.size.width + point.frame.origin.x, point.frame.origin.y, title.frame.size.width / 3, point.frame.size.height)];
+    NSMutableAttributedString *priceAttS = [[NSMutableAttributedString alloc]initWithString:priceS];
+    [priceAttS addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:13] range:NSMakeRange(0, 1)];
+    [priceAttS addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:20] range:NSMakeRange(1, priceS.length - 1)];
+    [priceAttS addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15] range:NSMakeRange(priceS.length - 1, 1)];
+    [priceAttS addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:244 /255.0 green:53 / 255.0 blue:0 alpha:1] range:NSMakeRange(0, priceS.length - 1)];
+    [priceAttS addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:193 / 255.0 green:193 / 255.0 blue:193 / 255.0 alpha:1] range:NSMakeRange(priceS.length - 1, 1)];
+    [price setAttributedText:priceAttS];
+    [price setTextAlignment:TextRight];
+    [self addSubview:price];
     
     UIView *sep = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height - 10, self.frame.size.width, 10)];
     [sep setBackgroundColor:[UIColor colorWithRed:244 / 255.0 green:244 / 255.0 blue:244 / 255.0 alpha:1]];
@@ -90,6 +173,36 @@
     }
     NSUInteger unicodeLength = asciiLength;
     return unicodeLength;
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+    
+    // Configure the view for the selected state
+}
+
+@end
+
+@implementation CGRoomListTableViewCell
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        self.img = [[UIImageView alloc] initWithFrame:CGRectZero];
+        [self.contentView addSubview:_img];
+    }
+    return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [_img setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
 }
 
 - (void)awakeFromNib {

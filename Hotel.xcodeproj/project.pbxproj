@@ -28,6 +28,8 @@
 		BD73D2A921A2B37800463350 /* DateModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73D2A821A2B37800463350 /* DateModelView.m */; };
 		BD73D2AC21A2D53900463350 /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73D2AB21A2D53900463350 /* SearchResultViewController.m */; };
 		BD73D2AF21A2D9E500463350 /* CGTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73D2AE21A2D9E500463350 /* CGTableViewCell.m */; };
+		BDC1D64721A3F596009D6221 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC1D64621A3F596009D6221 /* DetailViewController.m */; };
+		BDC1D64A21A4118E009D6221 /* RoomBookingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC1D64921A4118E009D6221 /* RoomBookingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,10 @@
 		BD73D2AB21A2D53900463350 /* SearchResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
 		BD73D2AD21A2D9E500463350 /* CGTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGTableViewCell.h; sourceTree = "<group>"; };
 		BD73D2AE21A2D9E500463350 /* CGTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGTableViewCell.m; sourceTree = "<group>"; };
+		BDC1D64521A3F596009D6221 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		BDC1D64621A3F596009D6221 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		BDC1D64821A4118E009D6221 /* RoomBookingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoomBookingViewController.h; sourceTree = "<group>"; };
+		BDC1D64921A4118E009D6221 /* RoomBookingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoomBookingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +232,10 @@
 				BD4291A5219C041100D73F28 /* HomeViewController.m */,
 				BD73D2AA21A2D53900463350 /* SearchResultViewController.h */,
 				BD73D2AB21A2D53900463350 /* SearchResultViewController.m */,
+				BDC1D64521A3F596009D6221 /* DetailViewController.h */,
+				BDC1D64621A3F596009D6221 /* DetailViewController.m */,
+				BDC1D64821A4118E009D6221 /* RoomBookingViewController.h */,
+				BDC1D64921A4118E009D6221 /* RoomBookingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -580,9 +590,11 @@
 				BD42916A219C02B100D73F28 /* ViewController.m in Sources */,
 				BD4291CC219C0C1700D73F28 /* CenterViewController.m in Sources */,
 				BD73D29D21A2AC1700463350 /* SelectView.m in Sources */,
+				BDC1D64721A3F596009D6221 /* DetailViewController.m in Sources */,
 				BD4291C9219C0C0D00D73F28 /* MineViewController.m in Sources */,
 				BD429175219C02B200D73F28 /* main.m in Sources */,
 				BD73D2A921A2B37800463350 /* DateModelView.m in Sources */,
+				BDC1D64A21A4118E009D6221 /* RoomBookingViewController.m in Sources */,
 				BD4291B0219C05E900D73F28 /* UIViewController+Base.m in Sources */,
 				BD73D2A621A2B31800463350 /* DateView.m in Sources */,
 				BD4291CF219C0C2100D73F28 /* AssistantViewController.m in Sources */,

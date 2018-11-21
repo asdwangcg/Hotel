@@ -14,6 +14,8 @@
 #define TintColor [UIColor colorWithRed:252 / 255.0 green:215 / 255.0 blue:51 / 255.0 alpha:1]
 #define BackgroundColor [UIColor colorWithRed:241 / 255.0 green:241 / 255.0 blue:241 / 255.0 alpha:1]
 #define SepColor [UIColor colorWithRed:197 / 255.0 green:197 / 255.0 blue:197 / 255.0 alpha:1]
+#define Color100 [UIColor colorWithRed:100 / 255.0 green:100 / 255.0 blue:100 / 255.0 alpha:1]
+#define Color244 [UIColor colorWithRed:244 / 255.0 green:244 / 255.0 blue:244 / 255.0 alpha:1]
 #define CellFont [UIFont systemFontOfSize:12 * 1.000]
 #define BoldCellFont [UIFont boldSystemFontOfSize:12 * 1.000]
 #define Font [UIFont systemFontOfSize:12 * 1.000]
@@ -52,6 +54,9 @@
 #define imageOrigin(image) [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
 
 #define push(viewController)    viewController *vc = [[viewController alloc] init];[self.navigationController pushViewController:vc animated:YES];[self.tabBarController setHidesBottomBarWhenPushed:YES];
+
+#define Se [self.navigationController.navigationBar setHidden:NO];
+#define Hid [self.navigationController.navigationBar setHidden:YES];
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

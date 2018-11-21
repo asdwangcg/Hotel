@@ -21,4 +21,26 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CGRoomListTableViewCell : UITableViewCell
 @property (nonatomic, strong)UIImageView *img;
 @end
+
+@interface CGOrderComplateListTableViewCell : UITableViewCell
+//@property (nonatomic, strong)UIImageView *img;
+@end
+
+@interface CGOrderCancelListTableViewCell : UITableViewCell
+//@property (nonatomic, strong)UIImageView *img;
+@end
+
+@interface CGOrderUnpayListTableViewCell : UITableViewCell
+@property (nonatomic, strong)UIImageView *img;
+@end
+
+@interface CGOrderButtomListTableViewCell : UITableViewCell
+//@property (nonatomic, strong)UIImageView *img;
+@end
+
+@interface CGStoredTableViewCell : UITableViewCell
+@property (nonatomic, strong)NSString *item;
+@property (nonatomic, assign)NSInteger plus;
+@property (nonatomic, assign)NSInteger num;
+@end
 NS_ASSUME_NONNULL_END

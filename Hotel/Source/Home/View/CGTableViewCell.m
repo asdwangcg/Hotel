@@ -26,7 +26,7 @@
     [self addSubview:img];
     
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(img.frame.size.width + img.frame.origin.x + 10, 10, self.frame.size.width - 20 - img.frame.size.width - img.frame.origin.x, [UIFont systemFontOfSize:15].pointSize)];
-    [title setTextColor:[UIColor colorWithRed:100 / 255.0 green:100 / 255.0 blue:100 / 255.0 alpha:1]];
+    [title setTextColor:Color100];
     [title setFont:[UIFont systemFontOfSize:15]];
     [title setTextAlignment:TextLeft];
     [title setText:_dic[@"title"]];
@@ -112,7 +112,7 @@
 
     
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(image.frame.origin.x, image.frame.size.height + image.frame.origin.y + 5, image.frame.size.width, [UIFont systemFontOfSize:15].pointSize)];
-    [title setTextColor:[UIColor colorWithRed:100 / 255.0 green:100 / 255.0 blue:100 / 255.0 alpha:1]];
+    [title setTextColor:Color100];
     [title setFont:[UIFont systemFontOfSize:15]];
     [title setText:_dic[@"title"]];
     
@@ -156,7 +156,7 @@
     [self addSubview:price];
     
     UIView *sep = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height - 10, self.frame.size.width, 10)];
-    [sep setBackgroundColor:[UIColor colorWithRed:244 / 255.0 green:244 / 255.0 blue:244 / 255.0 alpha:1]];
+    [sep setBackgroundColor:Color244];
     
     [self addSubview:image];
     [self addSubview:title];
@@ -195,6 +195,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.img = [[UIImageView alloc] initWithFrame:CGRectZero];
+        [_img setUserInteractionEnabled:YES];
         [self.contentView addSubview:_img];
     }
     return self;
@@ -216,4 +217,176 @@
     // Configure the view for the selected state
 }
 
+@end
+
+@implementation CGOrderComplateListTableViewCell
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+
+    }
+    return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+    
+    // Configure the view for the selected state
+}
+
+@end
+
+@implementation CGOrderUnpayListTableViewCell
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        self.img = [[UIImageView alloc] initWithFrame:CGRectZero];
+        [_img setUserInteractionEnabled:YES];
+        [self.contentView addSubview:_img];
+        [self.contentView setBackgroundColor:Color244];
+    }
+    return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [_img setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height - 10)];
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+    
+    // Configure the view for the selected state
+}
+
+@end
+
+@implementation CGOrderCancelListTableViewCell
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        
+    }
+    return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+    
+    // Configure the view for the selected state
+}
+
+@end
+
+@implementation CGOrderButtomListTableViewCell
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+    }
+    return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+    [label setBackgroundColor:Color244];
+    [label setText:@"僅支持3個月內的訂單查詢"];
+    [label setTextColor:Color100];
+    [label setTextAlignment:TextCenter];
+    [label setFont:[UIFont systemFontOfSize:15]];
+    [self.contentView addSubview:label];
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+    
+    // Configure the view for the selected state
+}
+
+@end
+
+@implementation CGStoredTableViewCell
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+    }
+    return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+    [img setImage:[UIImage imageNamed:@"arrbottom"]];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, (self.frame.size.width  - 50)/ 3 * 2, self.frame.size.height)];
+    [label setTextColor:Color100];
+    [label setFont:[UIFont systemFontOfSize:15]];
+    [label setTextAlignment:TextLeft];
+    [label setText:_item];
+    
+    UILabel *plus = [[UILabel alloc] initWithFrame:CGRectMake(label.frame.size.width + label.frame.origin.x, 0, (self.frame.size.width  - 50)/ 3, self.frame.size.height)];
+    [plus setText:[NSString stringWithFormat:@"%@ %ld元", _plus < 50 ? @"-" : @"+", _num]];
+    [plus setTextAlignment:TextRight];
+    [plus setFont:label.font];
+    if (_plus < 50) {
+        [plus setTextColor:[UIColor colorWithRed:0 green:191 / 255.0 blue:121 / 255.0 alpha:1]];
+    }
+    else {
+        [plus setTextColor:[UIColor colorWithRed:245 / 255.0 green:38 / 255.0 blue:47 / 255.0 alpha:1]];
+    }
+    [img addSubview:label];
+    [img addSubview:plus];
+    [self.contentView addSubview:img];
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+    
+    // Configure the view for the selected state
+}
 @end

@@ -63,8 +63,9 @@
     wallet.tabBarItem.image = imageOrigin(@"wallet");
     wallet.tabBarItem.selectedImage = imageOrigin(@"wallet1");
     UINavigationController *walletNav = [[UINavigationController alloc] initWithRootViewController:wallet];
+    
     [walletNav.navigationBar setTranslucent:NO];
-    [walletNav.navigationBar setHidden:YES];
+    [walletNav.navigationBar setHidden:NO];
     
     MineViewController *mine = [[MineViewController alloc] init];
     mine.tabBarItem.title = @"我";
@@ -76,7 +77,7 @@
     
     UITabBarController *tab = [[UITabBarController alloc] init];
 //    [tab.tabBar setFrame:CGRectMake(tab.tabBar.frame.origin.x, tab.tabBar.frame.origin.y, tab.tabBar.frame.size.width, tab.tabBar.frame.size.height + Xheight)];
-    [tab.tabBar setBackgroundImage:[UIImage new]];
+//    [tab.tabBar setBackgroundImage:[UIImage new]];
     [tab.tabBar setShadowImage:[UIImage new]];
     tab.tabBar.tintColor = colorHex(0xd4237a);
     tab.tabBar.barTintColor = UIColor.whiteColor;

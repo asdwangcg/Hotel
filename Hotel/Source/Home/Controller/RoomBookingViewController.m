@@ -7,17 +7,22 @@
 //
 
 #import "RoomBookingViewController.h"
-
+#import "OrderListViewController.h"
 @interface RoomBookingViewController ()
 
 @end
 
 @implementation RoomBookingViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setHidden:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view setBackgroundColor:[UIColor colorWithRed:244 / 255.0 green:244 / 255.0 blue:244 / 255.0 alpha:1]];
+    [self.view setBackgroundColor:Color244];
     [self layout];
     [self back];
 }
@@ -66,12 +71,18 @@
 - (void)orderAction {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"訂單成功" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *order =  [UIAlertAction actionWithTitle:@"去支付" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        push(OrderListViewController);
+        Share *share = [Share share];
+        [share.orderArr addObject:self.dic];
+    }];
     [alert addAction:cancel];
+    [alert addAction:order];
     [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)back {
-    UIImageView *BackImg = [[UIImageView alloc] initWithFrame:CGRectMake(10, 20 + 11, 40 * 1.000, 40 * 1.000)];
+    UIImageView *BackImg = [[UIImageView alloc] initWithFrame:CGRectMake(10, self.StatusbarHeight, 40 * 1.000, 40 * 1.000)];
     [BackImg setImage:[UIImage imageNamed:@"back"]];
     [BackImg setUserInteractionEnabled:YES];
     [BackImg setAlpha:.7];

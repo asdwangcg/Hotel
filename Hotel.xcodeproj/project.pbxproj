@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		18CFC3296954F5D55732295B /* libPods-Hotel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DF5ED7A95EFC3701622766 /* libPods-Hotel.a */; };
+		BD399F8321A577090027ADFC /* PopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD399F8121A577080027ADFC /* PopModel.m */; };
+		BD399F8621A577180027ADFC /* PopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD399F8521A577180027ADFC /* PopCell.m */; };
+		BD399F8921A59A860027ADFC /* WalletItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD399F8821A59A860027ADFC /* WalletItemViewController.m */; };
+		BD399F8C21A5A7730027ADFC /* BankCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD399F8A21A5A7730027ADFC /* BankCardViewController.m */; };
+		BD399F8F21A5A7AB0027ADFC /* BankCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD399F8D21A5A7AB0027ADFC /* BankCardTableViewCell.m */; };
+		BD399F9221A5AA750027ADFC /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD399F9121A5AA750027ADFC /* QRCodeViewController.m */; };
 		BD429167219C02B100D73F28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD429166219C02B100D73F28 /* AppDelegate.m */; };
 		BD42916A219C02B100D73F28 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD429169219C02B100D73F28 /* ViewController.m */; };
 		BD42916D219C02B100D73F28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD42916B219C02B100D73F28 /* Main.storyboard */; };
@@ -22,12 +28,15 @@
 		BD4291C9219C0C0D00D73F28 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4291C8219C0C0D00D73F28 /* MineViewController.m */; };
 		BD4291CC219C0C1700D73F28 /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4291CB219C0C1700D73F28 /* CenterViewController.m */; };
 		BD4291CF219C0C2100D73F28 /* AssistantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4291CE219C0C2100D73F28 /* AssistantViewController.m */; };
+		BD57D8AB21A53DBD0018B2B6 /* Share.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57D8AA21A53DBD0018B2B6 /* Share.m */; };
+		BD57D8AE21A553410018B2B6 /* ShoucangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57D8AD21A553410018B2B6 /* ShoucangViewController.m */; };
 		BD73D29721A2AC0500463350 /* LocalView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73D29621A2AC0500463350 /* LocalView.m */; };
 		BD73D29D21A2AC1700463350 /* SelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73D29C21A2AC1700463350 /* SelectView.m */; };
 		BD73D2A621A2B31800463350 /* DateView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73D2A521A2B31800463350 /* DateView.m */; };
 		BD73D2A921A2B37800463350 /* DateModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73D2A821A2B37800463350 /* DateModelView.m */; };
 		BD73D2AC21A2D53900463350 /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73D2AB21A2D53900463350 /* SearchResultViewController.m */; };
 		BD73D2AF21A2D9E500463350 /* CGTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73D2AE21A2D9E500463350 /* CGTableViewCell.m */; };
+		BD794E7821A502D000EFD107 /* OrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD794E7721A502D000EFD107 /* OrderListViewController.m */; };
 		BDC1D64721A3F596009D6221 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC1D64621A3F596009D6221 /* DetailViewController.m */; };
 		BDC1D64A21A4118E009D6221 /* RoomBookingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC1D64921A4118E009D6221 /* RoomBookingViewController.m */; };
 /* End PBXBuildFile section */
@@ -53,6 +62,18 @@
 		04DF5ED7A95EFC3701622766 /* libPods-Hotel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hotel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		558479BE1A5C28F5FC834C25 /* Pods-Hotel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hotel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hotel/Pods-Hotel.debug.xcconfig"; sourceTree = "<group>"; };
 		5F199C6B97814E4D17C9B9BD /* Pods-Hotel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hotel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hotel/Pods-Hotel.release.xcconfig"; sourceTree = "<group>"; };
+		BD399F8121A577080027ADFC /* PopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopModel.m; sourceTree = "<group>"; };
+		BD399F8221A577090027ADFC /* PopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopModel.h; sourceTree = "<group>"; };
+		BD399F8421A577180027ADFC /* PopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopCell.h; sourceTree = "<group>"; };
+		BD399F8521A577180027ADFC /* PopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopCell.m; sourceTree = "<group>"; };
+		BD399F8721A59A860027ADFC /* WalletItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WalletItemViewController.h; sourceTree = "<group>"; };
+		BD399F8821A59A860027ADFC /* WalletItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalletItemViewController.m; sourceTree = "<group>"; };
+		BD399F8A21A5A7730027ADFC /* BankCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardViewController.m; sourceTree = "<group>"; };
+		BD399F8B21A5A7730027ADFC /* BankCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardViewController.h; sourceTree = "<group>"; };
+		BD399F8D21A5A7AB0027ADFC /* BankCardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardTableViewCell.m; sourceTree = "<group>"; };
+		BD399F8E21A5A7AB0027ADFC /* BankCardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardTableViewCell.h; sourceTree = "<group>"; };
+		BD399F9021A5AA750027ADFC /* QRCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		BD399F9121A5AA750027ADFC /* QRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		BD429162219C02B100D73F28 /* Hotel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hotel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD429165219C02B100D73F28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BD429166219C02B100D73F28 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,6 +104,10 @@
 		BD4291CB219C0C1700D73F28 /* CenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CenterViewController.m; sourceTree = "<group>"; };
 		BD4291CD219C0C2100D73F28 /* AssistantViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssistantViewController.h; sourceTree = "<group>"; };
 		BD4291CE219C0C2100D73F28 /* AssistantViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssistantViewController.m; sourceTree = "<group>"; };
+		BD57D8A921A53DBD0018B2B6 /* Share.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Share.h; sourceTree = "<group>"; };
+		BD57D8AA21A53DBD0018B2B6 /* Share.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Share.m; sourceTree = "<group>"; };
+		BD57D8AC21A553410018B2B6 /* ShoucangViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoucangViewController.h; sourceTree = "<group>"; };
+		BD57D8AD21A553410018B2B6 /* ShoucangViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoucangViewController.m; sourceTree = "<group>"; };
 		BD73D29521A2AC0500463350 /* LocalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalView.h; sourceTree = "<group>"; };
 		BD73D29621A2AC0500463350 /* LocalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalView.m; sourceTree = "<group>"; };
 		BD73D29B21A2AC1700463350 /* SelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectView.h; sourceTree = "<group>"; };
@@ -95,6 +120,8 @@
 		BD73D2AB21A2D53900463350 /* SearchResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
 		BD73D2AD21A2D9E500463350 /* CGTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGTableViewCell.h; sourceTree = "<group>"; };
 		BD73D2AE21A2D9E500463350 /* CGTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGTableViewCell.m; sourceTree = "<group>"; };
+		BD794E7621A502D000EFD107 /* OrderListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderListViewController.h; sourceTree = "<group>"; };
+		BD794E7721A502D000EFD107 /* OrderListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderListViewController.m; sourceTree = "<group>"; };
 		BDC1D64521A3F596009D6221 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		BDC1D64621A3F596009D6221 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		BDC1D64821A4118E009D6221 /* RoomBookingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoomBookingViewController.h; sourceTree = "<group>"; };
@@ -199,6 +226,8 @@
 			children = (
 				BD4291AE219C05E900D73F28 /* UIViewController+Base.h */,
 				BD4291AF219C05E900D73F28 /* UIViewController+Base.m */,
+				BD57D8A921A53DBD0018B2B6 /* Share.h */,
+				BD57D8AA21A53DBD0018B2B6 /* Share.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -236,6 +265,8 @@
 				BDC1D64621A3F596009D6221 /* DetailViewController.m */,
 				BDC1D64821A4118E009D6221 /* RoomBookingViewController.h */,
 				BDC1D64921A4118E009D6221 /* RoomBookingViewController.m */,
+				BD794E7621A502D000EFD107 /* OrderListViewController.h */,
+				BD794E7721A502D000EFD107 /* OrderListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -288,6 +319,12 @@
 			children = (
 				BD4291C4219C0C0300D73F28 /* WalletViewController.h */,
 				BD4291C5219C0C0300D73F28 /* WalletViewController.m */,
+				BD399F8721A59A860027ADFC /* WalletItemViewController.h */,
+				BD399F8821A59A860027ADFC /* WalletItemViewController.m */,
+				BD399F8B21A5A7730027ADFC /* BankCardViewController.h */,
+				BD399F8A21A5A7730027ADFC /* BankCardViewController.m */,
+				BD399F9021A5AA750027ADFC /* QRCodeViewController.h */,
+				BD399F9121A5AA750027ADFC /* QRCodeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -302,6 +339,8 @@
 		BD4291B7219C0BEE00D73F28 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BD399F8E21A5A7AB0027ADFC /* BankCardTableViewCell.h */,
+				BD399F8D21A5A7AB0027ADFC /* BankCardTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -321,6 +360,8 @@
 			children = (
 				BD4291C7219C0C0D00D73F28 /* MineViewController.h */,
 				BD4291C8219C0C0D00D73F28 /* MineViewController.m */,
+				BD57D8AC21A553410018B2B6 /* ShoucangViewController.h */,
+				BD57D8AD21A553410018B2B6 /* ShoucangViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -394,6 +435,8 @@
 		BD4291C2219C0BEE00D73F28 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BD399F8221A577090027ADFC /* PopModel.h */,
+				BD399F8121A577080027ADFC /* PopModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -401,6 +444,8 @@
 		BD4291C3219C0BEE00D73F28 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BD399F8421A577180027ADFC /* PopCell.h */,
+				BD399F8521A577180027ADFC /* PopCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -595,13 +640,22 @@
 				BD429175219C02B200D73F28 /* main.m in Sources */,
 				BD73D2A921A2B37800463350 /* DateModelView.m in Sources */,
 				BDC1D64A21A4118E009D6221 /* RoomBookingViewController.m in Sources */,
+				BD399F9221A5AA750027ADFC /* QRCodeViewController.m in Sources */,
+				BD399F8C21A5A7730027ADFC /* BankCardViewController.m in Sources */,
+				BD399F8F21A5A7AB0027ADFC /* BankCardTableViewCell.m in Sources */,
 				BD4291B0219C05E900D73F28 /* UIViewController+Base.m in Sources */,
+				BD399F8921A59A860027ADFC /* WalletItemViewController.m in Sources */,
+				BD57D8AB21A53DBD0018B2B6 /* Share.m in Sources */,
+				BD399F8321A577090027ADFC /* PopModel.m in Sources */,
 				BD73D2A621A2B31800463350 /* DateView.m in Sources */,
 				BD4291CF219C0C2100D73F28 /* AssistantViewController.m in Sources */,
 				BD4291C6219C0C0300D73F28 /* WalletViewController.m in Sources */,
 				BD429167219C02B100D73F28 /* AppDelegate.m in Sources */,
+				BD57D8AE21A553410018B2B6 /* ShoucangViewController.m in Sources */,
+				BD794E7821A502D000EFD107 /* OrderListViewController.m in Sources */,
 				BD73D2AC21A2D53900463350 /* SearchResultViewController.m in Sources */,
 				BD73D2AF21A2D9E500463350 /* CGTableViewCell.m in Sources */,
+				BD399F8621A577180027ADFC /* PopCell.m in Sources */,
 				BD73D29721A2AC0500463350 /* LocalView.m in Sources */,
 				BD4291A9219C041100D73F28 /* HomeViewController.m in Sources */,
 			);

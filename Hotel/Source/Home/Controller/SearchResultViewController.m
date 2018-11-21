@@ -22,7 +22,7 @@
     self = [super init];
     if (self) {
         dataArr = [[NSMutableArray alloc] init];
-        NSMutableDictionary *dibai = [NSMutableDictionary dictionaryWithObjectsAndKeys:[UIImage imageNamed:@"dibai"], @"image", @"迪拜帆船七星級酒店(装修中，预计2018年12月开业)", @"title", @"4.7分/277條評論 交通便利\n距我200km | 迪拜", @"point", @[@"太陽權益", @"專票抵6%"], @"discout", @"5888", @"price", [UIImage imageNamed:@"dibai1"], @"image1", [UIImage imageNamed:@"dibai2"], @"image2", [UIImage imageNamed:@"dibai3"], @"image3", [UIImage imageNamed:@"dibai4"], @"image4", [UIImage imageNamed:@"dibai5"], @"image5", @"2008年07月開業    ·高端型", @"type", nil];
+        NSMutableDictionary *dibai = [NSMutableDictionary dictionaryWithObjectsAndKeys:[UIImage imageNamed:@"dibai"], @"image", @"迪拜帆船七星級酒店(裝修中，預計2018年12月開業)", @"title", @"4.7分/277條評論 交通便利\n距我200km | 迪拜", @"point", @[@"太陽權益", @"專票抵6%"], @"discout", @"5888", @"price", [UIImage imageNamed:@"dibai1"], @"image1", [UIImage imageNamed:@"dibai2"], @"image2", [UIImage imageNamed:@"dibai3"], @"image3", [UIImage imageNamed:@"dibai4"], @"image4", [UIImage imageNamed:@"dibai5"], @"image5", @"2008年07月開業    ·高端型", @"type", nil];
         NSMutableDictionary *zonglv = [NSMutableDictionary dictionaryWithObjectsAndKeys:[UIImage imageNamed:@"zonglv"], @"image", @"棕櫚島亞特蘭蒂斯酒店", @"title", @"4.9分/3157條評論 早餐種類豐富\n 距我207km | 迪拜/棕櫚島", @"point", @[@"太陽權益", @"免費停車", @"下午茶", @"雞尾酒"], @"discout", @"6999", @"price", [UIImage imageNamed:@"zonglv1"], @"image1", [UIImage imageNamed:@"zonglv2"], @"image2", [UIImage imageNamed:@"zonglv3"], @"image3", [UIImage imageNamed:@"zonglv4"],@"image4", [UIImage imageNamed:@"zonglv5"],  @"image5", @"2012年03月開業    ·高端型", @"type",nil];
         NSMutableDictionary *xinpujing = [NSMutableDictionary dictionaryWithObjectsAndKeys:[UIImage imageNamed:@"xinpujing"], @"image", @"澳門新葡京酒店(Grand Lisboa Macau)", @"title", @"4.9分/3157條評論 早餐種類豐富\n 距我207km | 澳門半島葡京路", @"point", @[@"休閒度假", @"浪漫情侶", @"商務出行", @"雞尾酒"], @"discout", @"1674", @"price", [UIImage imageNamed:@"xinpujing1"], @"image1", [UIImage imageNamed:@"xinpujing2"], @"image2", [UIImage imageNamed:@"xinpujing3"], @"image3", [UIImage imageNamed:@"xinpujing4"],@"image4", [UIImage imageNamed:@"xinpujing5"],  @"image5", @"1998年05月開業    ·豪華型", @"type",nil];
         
@@ -67,7 +67,7 @@
     [self.view addSubview:searchhead1];
     
     UIScrollView *headScroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, searchhead1.frame.size.height + searchhead1.frame.origin.y, self.view.frame.size.width, 50)];
-    [headScroll setBackgroundColor:[UIColor colorWithRed:244 / 255.0 green:244 / 255.0 blue:244 / 255.0 alpha:1]];
+    [headScroll setBackgroundColor:Color244];
     NSArray *headArr = @[@"收藏酒店", @"曾住酒店", @"迪拜", @"上海", @"帆船酒店", @"棕櫚島", @"麗思卡"];
     CGFloat ori_x = 5;
     for (int i = 0; i < [headArr count]; i ++) {
@@ -78,7 +78,7 @@
         [headButton.layer setBorderWidth:1];
         [headButton.layer setCornerRadius:1];
         [headButton.layer setBorderColor:[UIColor colorWithRed:197 / 255.0 green:197 / 255.0 blue:197 / 255.0 alpha:1].CGColor];
-        [headButton setTitleColor:[UIColor colorWithRed:100 / 255.0 green:100 / 255.0 blue:100 / 255.0 alpha:1] forState:StaNormal];
+        [headButton setTitleColor:Color100 forState:StaNormal];
         [headButton.titleLabel setFont:[UIFont systemFontOfSize:13]];
         [headScroll addSubview:headButton];
         ori_x += headButton.frame.size.width + 10;
@@ -88,7 +88,7 @@
     [self.view addSubview:headScroll];
     
     table = [[UITableView alloc] initWithFrame:CGRectMake(0, headScroll.frame.size.height + headScroll.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height - self.NavigationStatusbarHeight - headScroll.frame.size.height - headScroll.frame.origin.y) style:UITableViewStylePlain];
-    [table setBackgroundColor:[UIColor colorWithRed:244 / 255.0 green:244 / 255.0 blue:244 / 255.0 alpha:1]];
+    [table setBackgroundColor:Color244];
     [table setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     table.delegate = self;
     table.dataSource = self;
@@ -121,14 +121,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row % 4 == 0) {
-        push(DetailHugeViewController);
-        vc.dic = dataArr[indexPath.row];
-    }
-    else {
+//    if (indexPath.row % 4 == 0) {
+//        push(DetailHugeViewController);
+//        vc.dic = dataArr[indexPath.row];
+//    }
+//    else {
         push(DetailViewController);
         vc.dic = dataArr[indexPath.row];
-    }
+//    }
 }
 
 /*

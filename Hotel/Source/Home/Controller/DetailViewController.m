@@ -61,7 +61,7 @@
     
     UILabel *time = [[UILabel alloc] initWithFrame:CGRectMake(title.frame.origin.x, title.frame.origin.y + title.frame.size.height, title.frame.size.width, title.frame.size.height / 2)];
     [time setTextAlignment:title.textAlignment];
-    [time setTextColor:[UIColor colorWithRed:100 / 255.0 green:100 / 255.0 blue:100 / 255.0 alpha:1]];
+    [time setTextColor:Color100];
     [time setFont:[UIFont systemFontOfSize:14]];
     [time setText:_dic[@"type"]];
     [mainScroll addSubview:time];
@@ -133,7 +133,7 @@
 }
 
 - (void)back {
-    UIImageView *BackImg = [[UIImageView alloc] initWithFrame:CGRectMake(10, 20 + 11, 40 * 1.000, 40 * 1.000)];
+    UIImageView *BackImg = [[UIImageView alloc] initWithFrame:CGRectMake(10, self.StatusbarHeight, 40 * 1.000, 40 * 1.000)];
     [BackImg setImage:[UIImage imageNamed:@"back"]];
     [BackImg setUserInteractionEnabled:YES];
     [BackImg setAlpha:.7];

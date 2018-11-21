@@ -22,6 +22,13 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.navigationController.navigationBar setHidden:YES];
+    if (player) {
+        [player play];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [player pause];
 }
 
 - (void)viewDidLoad {

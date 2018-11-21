@@ -26,4 +26,7 @@
 #import "DateView.h"
 #import "SelectView.h"
 #import "CGTableViewCell.h"
+#import "Share.h"
+#import "DetailViewController.h"
+#import "PopCell.h"
 #endif /* Header_h */

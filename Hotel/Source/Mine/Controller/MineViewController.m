@@ -9,6 +9,7 @@
 #import "MineViewController.h"
 #import "OrderListViewController.h"
 #import "ShoucangViewController.h"
+#import "MineListDetailViewController.h"
 @interface MineViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @end
@@ -47,17 +48,20 @@
     [image setImage:[UIImage imageNamed:@"minetop"]];
     [mainScroll addSubview:image];
     
-    UIButton *order = CustomBtn;
-    [order setFrame:CGRectMake(0, self.view.frame.size.width / 1125 * 1202, self.view.frame.size.width / 1125 * 230, self.view.frame.size.width / 1125 * 230)];
-    [order addTarget:self action:@selector(orderAction) forControlEvents:tpi];
-    [image addSubview:order];
-    
     for (int i = 0; i < 3; i ++) {
         UIButton *button = CustomBtn;
         [button setFrame:CGRectMake(image.frame.size.width / 3 * i, self.view.frame.size.width / 1125 * 611, image.frame.size.width / 3, image.frame.size.width / 3)];
         [button setTag:100 + i];
         [button addTarget:self action:@selector(topAction:) forControlEvents:tpi];
         [image addSubview:button];
+    }
+    
+    for (int i = 0; i < 5; i ++) {
+        UIButton *order = CustomBtn;
+        [order setFrame:CGRectMake(self.view.frame.size.width / 5 * i, self.view.frame.size.width / 1125 * 1202, self.view.frame.size.width / 5, self.view.frame.size.width / 1125 * 230)];
+        [order addTarget:self action:@selector(orderAction:) forControlEvents:tpi];
+        [order setTag:200 + i];
+        [image addSubview:order];
     }
     
     UIView *sep = [[UIView alloc] initWithFrame:CGRectMake(0, image.frame.size.height + image.frame.origin.y, self.view.frame.size.width, 10)];
@@ -75,8 +79,18 @@
     [self.view addSubview:mainScroll];
 }
 
-- (void)orderAction {
-    push(OrderListViewController);
+- (void)orderAction:(UIButton *)button {
+    if (button.tag == 200) {
+        push(OrderListViewController);
+    }
+    else {
+        push(MineListDetailViewController);
+        NSArray *titleA = @[@"1", @"评价订单", @"商城订单", @"出行订单", @"其他订单"];
+        NSArray *heightA = @[@"1", @"1788", @"573", @"442", @"1310"];
+        vc.title = titleA[button.tag - 200];
+        
+        vc.height = [heightA[button.tag - 200] integerValue];
+    }
 }
 
 - (void)topAction:(UIButton *)button {
@@ -99,10 +113,19 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"開發中，敬請期待" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleCancel handler:nil];
-    [alert addAction:cancel];
-    [self presentViewController:alert animated:YES completion:nil];
+    if (indexPath.row == 3) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"開發中，敬請期待" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleCancel handler:nil];
+        [alert addAction:cancel];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    else {
+        push(MineListDetailViewController);
+        NSArray *titleA = @[@"常用信息", @"我的公司", @"勿扰模式", @"邀请好友", @"反馈"];
+        NSArray *heightA = @[@"1282", @"1418", @"1212", @"1", @"1644"];
+        vc.title = titleA[indexPath.row];
+        vc.height = [heightA[indexPath.row] integerValue];
+    }
 }
 /*
 #pragma mark - Navigation

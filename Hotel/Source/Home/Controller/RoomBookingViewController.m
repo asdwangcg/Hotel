@@ -60,7 +60,8 @@
     
     UIButton *bottom = CustomBtn;
     [bottom setFrame:CGRectMake(0, self.view.frame.size.height - self.view.frame.size.width / 1125 * 150, self.view.frame.size.width, self.view.frame.size.width / 1125 * 150)];
-    [bottom setBackgroundImage:[UIImage imageNamed:@"orderbottom"] forState:StaNormal];
+    [bottom setImage:[UIImage imageNamed:@"orderbottom"] forState:StaNormal];
+    [bottom setImage:[UIImage imageNamed:@"orderbottom"] forState:UIControlStateHighlighted];
     [bottom addTarget:self action:@selector(orderAction) forControlEvents:tpi];
     [self.view addSubview:bottom];
     

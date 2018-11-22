@@ -25,7 +25,7 @@
     // Do any additional setup after loading the view.
     [self config];
     [self layout];
-    self.title = @"我的訂單";
+    self.title = @"酒店订单";
     [self Back];
 }
 

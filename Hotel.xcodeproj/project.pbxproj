@@ -30,6 +30,7 @@
 		BD4291CF219C0C2100D73F28 /* AssistantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4291CE219C0C2100D73F28 /* AssistantViewController.m */; };
 		BD57D8AB21A53DBD0018B2B6 /* Share.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57D8AA21A53DBD0018B2B6 /* Share.m */; };
 		BD57D8AE21A553410018B2B6 /* ShoucangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57D8AD21A553410018B2B6 /* ShoucangViewController.m */; };
+		BD719A0021A65E5A003388C5 /* MineListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7199FF21A65E5A003388C5 /* MineListDetailViewController.m */; };
 		BD73D29721A2AC0500463350 /* LocalView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73D29621A2AC0500463350 /* LocalView.m */; };
 		BD73D29D21A2AC1700463350 /* SelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73D29C21A2AC1700463350 /* SelectView.m */; };
 		BD73D2A621A2B31800463350 /* DateView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73D2A521A2B31800463350 /* DateView.m */; };
@@ -108,6 +109,8 @@
 		BD57D8AA21A53DBD0018B2B6 /* Share.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Share.m; sourceTree = "<group>"; };
 		BD57D8AC21A553410018B2B6 /* ShoucangViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoucangViewController.h; sourceTree = "<group>"; };
 		BD57D8AD21A553410018B2B6 /* ShoucangViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoucangViewController.m; sourceTree = "<group>"; };
+		BD7199FE21A65E5A003388C5 /* MineListDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineListDetailViewController.h; sourceTree = "<group>"; };
+		BD7199FF21A65E5A003388C5 /* MineListDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineListDetailViewController.m; sourceTree = "<group>"; };
 		BD73D29521A2AC0500463350 /* LocalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalView.h; sourceTree = "<group>"; };
 		BD73D29621A2AC0500463350 /* LocalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalView.m; sourceTree = "<group>"; };
 		BD73D29B21A2AC1700463350 /* SelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectView.h; sourceTree = "<group>"; };
@@ -362,6 +365,8 @@
 				BD4291C8219C0C0D00D73F28 /* MineViewController.m */,
 				BD57D8AC21A553410018B2B6 /* ShoucangViewController.h */,
 				BD57D8AD21A553410018B2B6 /* ShoucangViewController.m */,
+				BD7199FE21A65E5A003388C5 /* MineListDetailViewController.h */,
+				BD7199FF21A65E5A003388C5 /* MineListDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -658,6 +663,7 @@
 				BD399F8621A577180027ADFC /* PopCell.m in Sources */,
 				BD73D29721A2AC0500463350 /* LocalView.m in Sources */,
 				BD4291A9219C041100D73F28 /* HomeViewController.m in Sources */,
+				BD719A0021A65E5A003388C5 /* MineListDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
